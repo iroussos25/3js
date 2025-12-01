@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Tab = () => {
+const CameraRig = () => {
   return (
     <div>
-      Tab
+      Camera
     </div>
   )
 }
 
-export default Tab
+export default CameraRig

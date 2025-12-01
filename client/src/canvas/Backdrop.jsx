@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Tab = () => {
+const Backdrop = () => {
   return (
     <div>
-      Tab
+      Backdrop
     </div>
   )
 }
 
-export default Tab
+export default Backdrop
