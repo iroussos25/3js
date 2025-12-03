@@ -50,7 +50,7 @@ const handleSubmit = async (type) => {
   try {
  setGeneratingImg(true);
 
- const response = await fetch('http://threejs-6drv.onrender.com/api/v1/dalle', {
+ const response = await fetch('https://threejs-1-4vud.onrender.com/api/v1/dalle', {
   method: 'POST',
   headers: {
     'Content-Type' : 'application/json'
