@@ -77,8 +77,8 @@ const handleSubmit = async (type) => {
           state.isLogoTexture = true;
           state.isFullTexture = false;
     }
-    // after setting the state, active the tab
-    setActiveEditorTab((prevState)=> {
+    // after setting the state, update the tab
+    setActiveFilterTab((prevState)=> {
       return {
         ...prevState, 
         [tabName] : !prevState[tabName]
