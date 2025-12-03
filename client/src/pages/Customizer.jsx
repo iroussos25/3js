@@ -85,6 +85,7 @@ const handleSubmit = async (type) => {
         break;
         case "stylishShirt":
         state.isFullTexture = !activeFilterTab[tabName];
+        break;
         default:
           state.isLogoTexture = true;
           state.isFullTexture = false;
@@ -151,6 +152,15 @@ const handleSubmit = async (type) => {
                 handleClick={() => handleActiveFilterTab(tab.name)}
                 />
               ))}
+              
+{/* Download button */}
+            <button className='download-btn' onClick={downloadCanvasToImage}>
+              <img
+                src={download}
+                alt='download_image'
+                className='w-3/5 h-3/5 object-contain'
+              />
+            </button>
 
        </motion.div>
        </> 
