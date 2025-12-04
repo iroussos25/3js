@@ -25,13 +25,13 @@ const AIPicker = ({
           <CustomButton
           type="outline"
           title="AI Logo"
-          handleClick={() => handleSubmit('logo')}
+          handleClick={() => alert('AI Logo generation not available without backend server')}
           customStyles="text-xs"
           />
           <CustomButton
           type="filled"
           title="AI Full"
-          handleClick={() => handleSubmit('full')}
+          handleClick={() => alert('AI Logo generation not available without backend server')}
           customStyles="text-xs"
           />
           </>

@@ -50,15 +50,15 @@ const handleSubmit = async (type) => {
   try {
  setGeneratingImg(true);
 
- const response = await fetch('https://threejs-1-4vud.onrender.com/api/v1/dalle', {
+ const response = await fetch('http://localhost:8080/api/v1/dalle', {
   method: 'POST',
   headers: {
     'Content-Type' : 'application/json'
   },
   body: JSON.stringify({prompt,
 
-  })
- })
+  }),
+ });
   const data = await response.json();
   handleDecals(type, `data:image/png;base64,${data.photo}`)
   } catch (error) {
@@ -66,6 +66,7 @@ const handleSubmit = async (type) => {
   } finally {
     setGeneratingImg(false);
     setActiveEditorTab("");
+    setPrompt("");
   }
 }
 
@@ -76,7 +77,7 @@ const handleSubmit = async (type) => {
     if(!activeFilterTab[DecalType.filterTab]) {
       handleActiveFilterTab(DecalType.filterTab)
     }
-  }
+  };
 
   const handleActiveFilterTab = (tabName) => {
     switch(tabName) {
@@ -96,18 +97,17 @@ const handleSubmit = async (type) => {
         ...prevState, 
         [tabName] : !prevState[tabName]
 
-      }
-    })
+      };
+    });
 
-  }
+  };
 
   const readFile = (type) => {
-    reader(file)
-    .then((result)=>{
+    reader(file).then((result)=>{
       handleDecals(type, result);
       setActiveEditorTab("");
-    })
-  }
+    });
+  };
 
   return (
     <AnimatePresence>
