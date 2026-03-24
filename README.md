@@ -17,13 +17,6 @@ The project uses a client/server split:
 - **Client:** Three.js scene with custom materials, lighting, and camera controls. Targets 60fps on mobile devices.
 - **Server:** Asset serving and API layer for product data.
 
-## AI logo generation (currently disabled)
-
-The storefront includes an AI-powered logo generator where users describe 
-a logo in natural language and the system generates it via an external AI 
-API. This feature is currently disabled in the live demo to avoid API 
-costs, but the integration code is in the repo.
-
 ## Key technical details
 
 - Three.js scene graph with custom geometry and materials
